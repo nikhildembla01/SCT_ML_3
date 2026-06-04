@@ -43,7 +43,7 @@ def load_and_preprocess(image_path, size=IMAGE_SIZE):
     return resized.flatten().astype(np.float32)
 
 
-def load_dataset(cats_dir, dogs_dir, max_per_class=MAX_IMAGES):
+def load_dataset(cats_dir=CATS_DIR, dogs_dir=DOGS_DIR, max_per_class=MAX_IMAGES):
     """Read images from cats/ and dogs/ folders. Labels: 0=Cat, 1=Dog"""
     X, y = [], []
 
