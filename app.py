@@ -991,7 +991,7 @@ elif page == "Model Training":
                     if "train_model" in sys.modules:
                         del sys.modules["train_model"]
                     import train_model as tm
-                    X, y = tm.load_dataset(CATS_DIR, DOGS_DIR)
+                    X, y = tm.load_dataset(CATS_DIR, DOGS_DIR, MAX_IMAGES)
                     X_tr, X_te, y_tr, y_te = train_test_split(
                         X, y, test_size=TEST_SIZE,
                         random_state=RANDOM_STATE, stratify=y
